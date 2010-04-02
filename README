@@ -1,0 +1,5 @@
+This script looks for notices on the debian-security rss feed and
+compares them against currently installed packages.  If any matches
+are found the alert is printed to standard output.  This is intended
+to run from cron so that the output is sent to the systems
+administrator.

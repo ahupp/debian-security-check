@@ -16,9 +16,6 @@ Requires: python-apt, dctrl-tools, python-feedparser
 import sys
 import os
 import feedparser
-import warnings
-
-warnings.filterwarnings("ignore", message="apt API not stable yet")
 import apt
 
 def source_to_binary(source_package):   
@@ -44,7 +41,7 @@ def src_needs_upgrade(cache, srcpackage):
     binpackage = source_to_binary(srcpackage)
 
     for i in binpackage:
-        if cache[i].isUpgradable:
+        if cache[i].is_upgradable:
             return True
     return False
 

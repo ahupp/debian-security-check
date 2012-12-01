@@ -59,5 +59,7 @@ if __name__ == "__main__":
             print >>sys.stderr, "Security Update:", srcpackage
             print >>sys.stderr, i.summary
             print >>sys.stderr, ""
+            print >>sys.stderr, i.link
+            print >>sys.stderr, ""
 
 

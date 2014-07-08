@@ -56,10 +56,8 @@ if __name__ == "__main__":
         srcpackage = i.title.split()[1]
     
         if src_needs_upgrade(cache, srcpackage):
-            print >>sys.stderr, "Security Update:", srcpackage
-            print >>sys.stderr, i.summary
-            print >>sys.stderr, ""
-            print >>sys.stderr, i.link
+            print >>sys.stderr, "Security Update:", srcpackage.encode('utf-8')
+            print >>sys.stderr, i.summary.encode('utf-8')
             print >>sys.stderr, ""
 
 
